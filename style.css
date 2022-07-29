@@ -90,13 +90,6 @@ a:hover {
     right: 0;
 }
 
-/* suppression de cet image de texture inadaptée
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
-}
-*/
-
 .b-parallax {
     background-attachment: fixed;
 }
@@ -364,7 +357,7 @@ a:hover {
     z-index: 2;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .site-navigation {
         position: absolute;
         top: 50%;
@@ -831,7 +824,7 @@ h4 {
     background-image: url("img/image-de-presentation.jpg");
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
         padding-right: 20px;
@@ -846,7 +839,7 @@ h4 {
     }
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
     .navbar .nav {
         max-width: 80%
     }
@@ -856,19 +849,19 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .container {
         width: 100%;
     }
@@ -882,11 +875,12 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-
+    /* -- propriété invalide -- source W3C
     .bloc {
         padding-left: constant(safe-area-inset-left);
         padding-right: constant(safe-area-inset-right);
-    }
+    } 
+    */
 
     .bloc-group,
     .bloc-group .bloc {
@@ -897,12 +891,14 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
+        /* -- -- propriété invalide -- source W3C
         padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-right: constant(safe-area-inset-right); 
+        */
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .page-container {
         overflow-x: hidden;
         position: relative;
@@ -1070,14 +1066,14 @@ h4 {
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .bloc {
         padding-left: 0;
         padding-right: 0;
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
     }
